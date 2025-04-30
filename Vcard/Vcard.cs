@@ -78,6 +78,7 @@ namespace Vcard
 
             using (StreamWriter writer = new StreamWriter(fileName, append: true))
             {
+                writer.WriteLine();
                 writer.WriteLine("BEGIN:VCARD");
                 writer.WriteLine($"FN:{newContact.FullName}");
                 writer.WriteLine($"TEL:{newContact.PhoneNumber}");

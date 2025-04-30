@@ -6,7 +6,7 @@ namespace Vcard
         static void Main(string[] args)
         {
             // initialize the file name and a variable for the user's choice
-            string fileName = "contacts.vcf";
+            string fileName = "../../../contacts.vcf";
             string choice;
 
             Console.WriteLine("Welcome to the Vcard application!");

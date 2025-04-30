@@ -1,0 +1,17 @@
+BEGIN:VCARD
+FN:Jean Dupont
+TEL:+33123456789
+EMAIL:jean.dupont@email.com
+END:VCARD
+
+BEGIN:VCARD
+FN:Marie Martin
+TEL:+33611223344
+EMAIL:marie.martin@email.com
+END:VCARD
+
+BEGIN:VCARD
+FN:Paul Moreau
+TEL:+33798765432
+EMAIL:paul.moreau@email.com
+END:VCARD

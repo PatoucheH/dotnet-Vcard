@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
-using Spectre.Console;
-
-=======
 ﻿
->>>>>>> dev
 namespace Vcard
 {
     internal class Program

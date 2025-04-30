@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+
+# Autres
+*.log
+*.db
+*.DS_Store

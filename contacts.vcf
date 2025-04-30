@@ -14,4 +14,8 @@ BEGIN:VCARD
 FN:Paul Moreau
 TEL:+33798765432
 EMAIL:paul.moreau@email.com
+END:VCARDBEGIN:VCARD
+FN:hugo patou
+TEL:0499999999
+EMAIL:path@becode.be
 END:VCARD

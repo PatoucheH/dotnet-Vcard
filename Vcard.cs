@@ -42,6 +42,10 @@ namespace Vcard
         /// <param name="fileName">Path of the file</param>
         public static void AddAContact(List<Contact> contactsList, string fileName)
         {
+            if (!File.Exists(fileName))
+            {
+                File.Create(fileName).Close();
+            }
             Contact newContact = new Contact();
             string fullName, phoneNumber, email;
 

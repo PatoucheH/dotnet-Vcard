@@ -1,29 +1,30 @@
 BEGIN:VCARD
-FN:Jean Dupont
-TEL:+33123456789
-EMAIL:jean.dupont@email.com
+FN:albert a
+TEL:+3200000000
+EMAIL:alber@live.be
 END:VCARD
-
-BEGIN:VCARD
-FN:Marie Martin
-TEL:+33611223344
-EMAIL:marie.martin@email.com
-END:VCARD
-
-BEGIN:VCARD
-FN:Paul Moreau
-TEL:+33798765432
-EMAIL:paul.moreau@email.com
-END:VCARD
-
 BEGIN:VCARD
 FN:hugo patou
 TEL:0499999999
 EMAIL:path@becode.be
 END:VCARD
-
 BEGIN:VCARD
-FN:jean 
-TEL:+32489898989
-EMAIL:jean@jean.jean
+FN:Jean Dupont
+TEL:+33123456789
+EMAIL:jean.dupont@email.com
+END:VCARD
+BEGIN:VCARD
+FN:Marie Martin
+TEL:+33611223344
+EMAIL:marie.martin@email.com
+END:VCARD
+BEGIN:VCARD
+FN:Paul Moreau
+TEL:+33798765432
+EMAIL:paul.moreau@email.com
+END:VCARD
+BEGIN:VCARD
+FN:Pierre Paul
+TEL:+9489898989
+EMAIL:Pierre.Paul@hotmail.com
 END:VCARD

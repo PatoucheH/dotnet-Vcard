@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
+using System.Xml.Linq; 
 using Spectre.Console;
 using Spectre.Console.Cli;
 
 namespace Vcard
 {
-    internal class Vcard
+    public class Vcard
     {
         /// <summary>
         /// Method to display all the contacts
@@ -157,13 +158,13 @@ namespace Vcard
                 foreach (var contactToKeep in contactsList)
                 {
                     content += $"BEGIN:VCARD\nFN:{contactToKeep.FullName}\nTEL:{contactToKeep.PhoneNumber}" +
-                        $"\nEMAIL:{contactToKeep.Email}\nEND:VCARD";
+                        $"\nEMAIL:{contactToKeep.Email}\nEND:VCARD\n";
                 }
                 File.WriteAllText(fileName, content);
 
                 string contentToExport = $"BEGIN:VCARD\nFN:{contactToExport.FullName}\nTEl:{contactToExport.PhoneNumber}" +
-                    $"\nEMAIL:{contactToExport.Email}\nEND:VCARD\n";
-                File.WriteAllText($"{nameToExport}.vcf", contentToExport);
+                    $"\nEMAIL:{contactToExport.Email}\nEND:VCARD\n\n";
+                File.WriteAllText($"../../../{nameToExport}.vcf", contentToExport);
 
                 AnsiConsole.MarkupLine($"[green]{nameToExport} successfully exported.[/]");
             }
@@ -171,6 +172,20 @@ namespace Vcard
             {
                 AnsiConsole.MarkupLine($"[red3]{nameToExport} doesn't exist.[/]");
             }
+        }
+
+        public static List<Contact> SortContactsByName(List<Contact> contactsList, string fileName)
+        {
+            string content = "";
+            var sortedContacts = contactsList.Where(contact => !string.IsNullOrWhiteSpace(contact.FullName))
+                .OrderBy(contact => contact.FullName).ToList();
+            foreach (var contact in sortedContacts)
+            {
+                content += $"BEGIN:VCARD\nFN:{contact.FullName}\nTEL:{contact.PhoneNumber}" +
+                    $"\nEMAIL:{contact.Email}\nEND:VCARD\n\n";
+            }
+            File.WriteAllText(fileName, content);
+            return sortedContacts;
         }
     }
 }

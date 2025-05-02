@@ -9,7 +9,7 @@ namespace Vcard
     /// <summary>
     /// Create a class Contact 
     /// </summary>
-    internal class Contact
+    public class Contact
     {
         public string? FullName { get; set; }
         public string? PhoneNumber { get; set; }

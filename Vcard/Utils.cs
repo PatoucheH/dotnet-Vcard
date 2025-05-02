@@ -24,7 +24,8 @@ namespace Vcard
             AnsiConsole.MarkupLine("[italic]3. Search for a contact by his name[/]");
             AnsiConsole.MarkupLine("[italic]4. [red]Delete[/] a contact[/]");
             AnsiConsole.MarkupLine("[italic]5. Export a contact in a separate file[/]");
-            AnsiConsole.MarkupLine("[italic]6. [red3]Exit[/][/]");
+            AnsiConsole.MarkupLine("[italic]6. [yellow]Sort[/] all the contact by name [/]");
+            AnsiConsole.MarkupLine("[italic]7. [red3]Exit[/][/]");
         }
 
         /// <summary>
@@ -112,7 +113,8 @@ namespace Vcard
         /// <returns>a bool if the phone number is valid or not</returns>
         public static bool IsValidInternationalPhoneNumber(string phoneNumber)
         {
-            string pattern = @"^(?:\+([1-9][0-9]{0,2})\s?\d{6,12}|0[1-9](?:\s?\d{2}){4})$";
+            string pattern = @"^(\+?[1-9][0-9]{0,2})?[\s\-]?\(?\d{1,4}\)?([\s\-]?\d{2,4}){2,4}$";
+
             return Regex.IsMatch(phoneNumber, pattern);
         }
 

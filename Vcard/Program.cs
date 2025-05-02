@@ -1,4 +1,6 @@
-﻿
+﻿using Spectre.Console;
+
+
 namespace Vcard
 {
     internal class Program
@@ -19,7 +21,7 @@ namespace Vcard
             List<Contact> contactsList = Utils.LoadAllFile(fileName);
 
             // loop on the user's choice each number made a diffenrent action 
-            while (choice != "6")
+            while (choice != "7")
             {
                 switch (choice)
                 {
@@ -38,8 +40,11 @@ namespace Vcard
                     case "5":
                         Vcard.ExportContact(contactsList, fileName);
                         break;
+                    case "6":
+                        contactsList = Vcard.SortContactsByName(contactsList, fileName);
+                        break;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        AnsiConsole.MarkupLine("[red]Invalid choice. Please try again.[/]");
                         break;
                 }
                 Utils.DisplayMenu();

@@ -23,16 +23,19 @@ Elle utilise **Spectre.Console** pour enrichir l’interface en ligne de command
 
 ```plaintext
 VCardManager/
-├── Contact.cs            -> Modèle de données pour les contacts
-├── Program.cs            -> Point d'entrée de l'application
-├── Utils.cs              -> Méthodes utilitaires (affichage, chargement, etc.)
-├── Vcard.cs              -> Logique métier de gestion des contacts
-├── Vcard.csproj          -> Fichier projet .NET
-├── contacts.vcf          -> Exemple de fichier vCard
-├── zazi zzz.vcf          -> Autre fichier de test
+├── Vcard/
+│   ├── Contact.cs            -> Modèle de données pour les contacts
+│   ├── Program.cs            -> Point d'entrée de l'application
+│   ├── Utils.cs              -> Méthodes utilitaires (affichage, chargement, etc.)
+│   ├── Vcard.cs              -> Logique métier de gestion des contacts
+│   ├── Vcard.csproj          -> Fichier projet .NET
+│   ├── contacts.vcf          -> Exemple de fichier vCard
+│   └── zazi zzz.vcf          -> Autre fichier de test
 ├── Tests/
-│   ├── VcardTests.cs     -> Fichier de tests xUnit
-│   └── Tests.csproj      -> Projet de test
+│   ├── VcardTests.cs         -> Fichier de tests xUnit
+│   ├── contactsDeleteTest.vcf -> Fichier contacts de tests
+│   ├──contactsTest.vcf       -> Fichier contacts de tests
+│   └── Tests.csproj          -> Projet de test
 ````
 
 ## 🧰 Technologies utilisées
